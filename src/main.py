@@ -3,6 +3,24 @@ import matplotlib.pyplot as plt             #import matplotlib module 4 python
 import matplotlib.image as img              
 import time                                 #time management lib
 delay_ = 2.00                               #global var to set a little delay of 2secs
+import RPi.GPIO as GPIO                     #imports GPIO module
+
+##SET UP THE SETMODE https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/
+def setUpPins():
+    GPIO.setmode(GPIO.BOARD)
+    #GPIO.setmode(GPIO.BCM)
+    mode = GPIO.getmode()
+
+def takeInput():
+    GPIO.input(channel)
+
+def takeOutput():
+    GPIO.output(channel, state)
+    
+    chan_list = [11,12]                             # also works with tuples
+    GPIO.output(chan_list, GPIO.LOW)                # sets all to GPIO.LOW
+    GPIO.output(chan_list, (GPIO.HIGH, GPIO.LOW))   # sets first HIGH and second LOW
+
 
 def setPillColor(self, pillCapture):    #Pill color detection
     #Color detection implementation -> https://pyimagesearch.com/2014/08/04/opencv-python-color-detection/
