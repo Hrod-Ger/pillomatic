@@ -4,7 +4,6 @@ Main code for the RLP project
 # Table of contents
 - [What is this?](https://github.com/Hrod-Ger/pillomatic#what-is-this)
 - [Requirements](https://github.com/Hrod-Ger/pillomatic#requirements)
-- [Documentation](https://github.com/Hrod-Ger/pillomatic#documentation)
 - [Algorithms](https://github.com/Hrod-Ger/pillomatic#algorithms)
 - [Licence](https://github.com/Hrod-Ger/pillomatic#licence)
 - [Use-case](https://github.com/Hrod-Ger/pillomatic#use-case)
@@ -24,9 +23,6 @@ For running each sample code:
 - Matplotlib
 - RPi.GPIO
 - cv2
-
-# Documentation
-
 
 # Algorithms
 We use one algorithm to detect via a WebCam which colour is the pill in order to classify it:
