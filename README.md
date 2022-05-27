@@ -29,7 +29,7 @@ For running each sample code:
 
 
 # Algorithms
-We use one algorithm to detect via a WebCam of which colour is the pill in order to classify it:
+We use one algorithm to detect via a WebCam which colour is the pill in order to classify it:
 - [Code](https://github.com/Hrod-Ger/pillomatic/blob/main/src/main.py)
 
 # License
