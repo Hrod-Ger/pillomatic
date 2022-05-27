@@ -3,8 +3,8 @@ Main code for the RLP project
 
 # Table of contents
 - [What is this?](https://github.com/Hrod-Ger/pillomatic#what-is-this)
-- [Requirements]((https://github.com/Hrod-Ger/pillomatic#requirements)
-- [Documentation]((https://github.com/Hrod-Ger/pillomatic#documentation)
+- [Requirements](https://github.com/Hrod-Ger/pillomatic#requirements)
+- [Documentation](https://github.com/Hrod-Ger/pillomatic#documentation)
 - [Algorithms](https://github.com/Hrod-Ger/pillomatic#algorithms)
 - [Licence](https://github.com/Hrod-Ger/pillomatic#licence)
 - [Use-case](https://github.com/Hrod-Ger/pillomatic#use-case)
