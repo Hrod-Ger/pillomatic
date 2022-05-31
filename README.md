@@ -16,13 +16,15 @@ This is our RLP project. It is a pill dispenser that can classify the pills give
 Our main goal with this project is to make easier the life of the people with our robot.
 
 # Requirements
-For running each sample code:
-- Python 3.9.x
+For running each sample code, you'll need those libraries:
+- Python 3.5.x
 - NumPy
 - time
 - Matplotlib
 - RPi.GPIO
 - cv2
+- Adafruit_PCA9685
+- sys
 
 # Algorithms
 We use one algorithm to detect via a WebCam which colour is the pill in order to classify it:
@@ -49,3 +51,4 @@ You can contribute to improve this project!
 - [Detect colour in real time](https://github.com/aysekonus/realtimecolordetection](https://www.geeksforgeeks.org/multiple-color-detection-in-real-time-using-python-opencv/)
 - [Servo Featherwing information](https://learn.adafruit.com/adafruit-8-channel-pwm-or-servo-featherwing)
 - [RPi.GPIO basics](https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/)
+- [Install Python](https://raspberrytips.com/install-latest-python-raspberry-pi/)
