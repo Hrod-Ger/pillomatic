@@ -1,6 +1,6 @@
+from __future__ import division
 import RPi.GPIO as gpio
 import sys
-from __future__ import division
 import time
 import Adafruit_PCA9685
 import numpy as np
