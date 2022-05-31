@@ -46,6 +46,6 @@ You can contribute to improve this project!
 # Bibliography
 - [Robot that was our inspiration](https://www.xataka.com/robotica-e-ia/pillo-es-robot-asistente-que-mira-por-tu-salud-reconoce-caras-y-dispensa-medicamentos)
 - [Detect colour with OpenCV](https://pyimagesearch.com/2014/08/04/opencv-python-color-detection/)
-- [Detect colour in real time](https://github.com/aysekonus/realtimecolordetection)
+- [Detect colour in real time](https://github.com/aysekonus/realtimecolordetection](https://www.geeksforgeeks.org/multiple-color-detection-in-real-time-using-python-opencv/)
 - [Servo Featherwing information](https://learn.adafruit.com/adafruit-8-channel-pwm-or-servo-featherwing)
 - [RPi.GPIO basics](https://sourceforge.net/p/raspberry-gpio-python/wiki/BasicUsage/)
