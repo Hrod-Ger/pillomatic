@@ -28,13 +28,17 @@ For running each sample code, you'll need those libraries:
 
 # Algorithms
 We use one algorithm to detect via a WebCam which colour is the pill in order to classify it:
-- [Code](https://github.com/Hrod-Ger/pillomatic/blob/main/src/main.py)
+- [First example code](https://github.com/Hrod-Ger/pillomatic/blob/main/src/main.py)
+- [Color detection in real time](https://github.com/Hrod-Ger/pillomatic/blob/main/pruebaCol.py)
+- [Movement of servos](https://github.com/Hrod-Ger/pillomatic/blob/main/servoMotors.py)
+- [Movement of stepper](https://github.com/Hrod-Ger/pillomatic/blob/main/stepper.py)
+- [Final code](https://github.com/Hrod-Ger/pillomatic/blob/main/UNITEDCODES.py)
 
 # License
 MIT
 
 # Use-case
-This project can be used to classify pills or small objects by their colour.
+This project can be used to classify pills or small objects by their colour, and dispense them whenever you have to use them.
 
 # Contribution
 You can contribute to improve this project!
