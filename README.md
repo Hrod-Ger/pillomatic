@@ -5,7 +5,7 @@ Main code for the RLP project
 - [What is this?](https://github.com/Hrod-Ger/pillomatic#what-is-this)
 - [Requirements](https://github.com/Hrod-Ger/pillomatic#requirements)
 - [Algorithms](https://github.com/Hrod-Ger/pillomatic#algorithms)
-- [Licence](https://github.com/Hrod-Ger/pillomatic#licence)
+- [License](https://github.com/Hrod-Ger/pillomatic#license)
 - [Use-case](https://github.com/Hrod-Ger/pillomatic#use-case)
 - [Contribution](https://github.com/Hrod-Ger/pillomatic#contribution)
 - [Authors](https://github.com/Hrod-Ger/pillomatic#authors)
