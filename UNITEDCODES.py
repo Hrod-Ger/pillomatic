@@ -109,7 +109,7 @@ while pills < 2:
     
     time.sleep(4)
     # Extract pill
-    for i in range(numColor)
+    for i in range(numColor):
         gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
         time.sleep(0.002)
         gpio.output(motorPins, (gpio.HIGH,gpio.HIGH,gpio.LOW,gpio.LOW))
@@ -124,7 +124,7 @@ while pills < 2:
     pwm.set_pwm(6, 0, servo_max)
     time.sleep(1)
 
-    for i in range(numColor)
+    for i in range(numColor):
         gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
         time.sleep(0.002)
         gpio.output(motorPins, (gpio.LOW,gpio.LOW,gpio.HIGH,gpio.HIGH))
