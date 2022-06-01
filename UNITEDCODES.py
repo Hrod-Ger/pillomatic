@@ -42,6 +42,7 @@ while pills < 2:
     pwm.set_pwm(0, 0, servo_max)
     time.sleep(4)
     
+    # Color detection
     numColor = 0
     _, imageFrame = webcam.read()
     hsvFrame = cv2.cvtColor(imageFrame, cv2.COLOR_BGR2HSV)
@@ -70,72 +71,65 @@ while pills < 2:
                                 mask = green_mask)
 
     # Creating contour to track red color
-    contours, hierarchy = cv2.findContours(red_mask,
+    contoursR, hierarchy = cv2.findContours(red_mask,
                                         cv2.RETR_TREE,
                                         cv2.CHAIN_APPROX_SIMPLE)
-    
-    for pic, contour in enumerate(contours):
-        area = cv2.contourArea(contour)
-        if(area > 300):
-            x, y, w, h = cv2.boundingRect(contour)
-            imageFrame = cv2.rectangle(imageFrame, (x, y),
-                                    (x + w, y + h),
-                                    (0, 0, 255), 2)
-            numColor = 1
-            cv2.putText(imageFrame, "Red Colour", (x, y),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1.0,
-                        (0, 0, 255))
+    if(contoursR):
+        numColor=1
+
 
     # Creating contour to track green color
-    contours, hierarchy = cv2.findContours(green_mask,
+    contoursG, hierarchy = cv2.findContours(green_mask,
                                         cv2.RETR_TREE,
                                         cv2.CHAIN_APPROX_SIMPLE)
+    if(contoursG):
+        numColor=2
     
-    for pic, contour in enumerate(contours):
-        area = cv2.contourArea(contour)
-        if(area > 300):
-            x, y, w, h = cv2.boundingRect(contour)
-            imageFrame = cv2.rectangle(imageFrame, (x, y),
-                                    (x + w, y + h),
-                                    (0, 255, 0), 2)
-            numColor = 2
-            cv2.putText(imageFrame, "Green Colour", (x, y),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        1.0, (0, 255, 0))
-
+    # Pill to selector
     # Move servo on channel 2 between extremes.
     pwm.set_pwm(2, 0, servo_min)
     time.sleep(1)
     pwm.set_pwm(2, 0, servo_max)
     time.sleep(4)
     
-    # Move servo on channel 3 between extremes.
-    print('Moving servo on channel 3, press Ctrl-C to quit...')
-    pwm.set_pwm(3, 0, servo_min)
-    time.sleep(7)
-    pwm.set_pwm(3, 0, servo_max)
-    time.sleep(1)
+    if(numColor==1):
+        # Move servo on channel 3 between extremes.
+        print('Moving servo on channel 3, press Ctrl-C to quit...')
+        pwm.set_pwm(3, 0, servo_min)
+        time.sleep(7)
+        pwm.set_pwm(3, 0, servo_max)
+        time.sleep(1)
+    if(numColor==2):
+        # Move servo on channel 3 between extremes.
+        print('Moving servo on channel 3, press Ctrl-C to quit...')
+        pwm.set_pwm(3, 0, 300)
+        time.sleep(7)
+        pwm.set_pwm(3, 0, servo_max)
+        time.sleep(1)
     
-# Extract pill
-gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.HIGH,gpio.HIGH,gpio.LOW,gpio.LOW))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.LOW,gpio.HIGH,gpio.HIGH,gpio.LOW))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.LOW,gpio.LOW,gpio.HIGH,gpio.HIGH))
-time.sleep(0.002)
-# Move servo on channel 6 between extremes.
-pwm.set_pwm(6, 0, servo_min)
-time.sleep(1)
-pwm.set_pwm(6, 0, servo_max)
-time.sleep(1)
+    time.sleep(4)
+    # Extract pill
+    for i in range(numColor)
+        gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.HIGH,gpio.HIGH,gpio.LOW,gpio.LOW))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.LOW,gpio.HIGH,gpio.HIGH,gpio.LOW))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.LOW,gpio.LOW,gpio.HIGH,gpio.HIGH))
+        time.sleep(0.002)
+    # Move servo on channel 6 between extremes.
+    pwm.set_pwm(6, 0, servo_min)
+    time.sleep(1)
+    pwm.set_pwm(6, 0, servo_max)
+    time.sleep(1)
 
-gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.LOW,gpio.LOW,gpio.HIGH,gpio.HIGH))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.LOW,gpio.HIGH,gpio.HIGH,gpio.LOW))
-time.sleep(0.002)
-gpio.output(motorPins, (gpio.HIGH,gpio.HIGH,gpio.LOW,gpio.LOW))
-time.sleep(0.002)
+    for i in range(numColor)
+        gpio.output(motorPins, (gpio.HIGH,gpio.LOW,gpio.LOW,gpio.HIGH))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.LOW,gpio.LOW,gpio.HIGH,gpio.HIGH))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.LOW,gpio.HIGH,gpio.HIGH,gpio.LOW))
+        time.sleep(0.002)
+        gpio.output(motorPins, (gpio.HIGH,gpio.HIGH,gpio.LOW,gpio.LOW))
+        time.sleep(0.002)
